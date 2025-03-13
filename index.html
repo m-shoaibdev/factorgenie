@@ -6,15 +6,18 @@
     <title>Mobile App for Freight Factors | FactorGenie</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
   </head>
   <body>
     <!-- Header -->
     <header
-      class="flex justify-between items-center shadow-md rounded-full p-3 mx-4 fixed top-5 left-0 right-0 z-11"
+      class="flex justify-between items-center shadow-md rounded-full p-3 mx-4 fixed top-5 left-0 right-0 z-20"
     >
       <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
-        <a href="#" class="logo w-48 py-1">
+        <a href="index.html" class="logo w-48 py-1">
           <svg
             preserveAspectRatio="xMidYMid meet"
             data-bbox="0 0 456.82 52.14"
@@ -86,8 +89,10 @@
         </a>
         <!-- Desktop Menu -->
         <nav class="hidden md:flex space-x-6 items-center text-black">
-          <a href="#" class="hover:text-blue-500">Features</a>
-          <a href="#" class="hover:text-blue-500">Integrations</a>
+          <a href="index.html" class="hover:text-blue-500">Features</a>
+          <a href="integrations.html" class="hover:text-blue-500"
+            >Integrations</a
+          >
           <a href="#" class="hover:text-blue-500">Contact Us</a>
           <a href="#" class="hover:text-blue-500">Pricing</a>
           <a
@@ -124,10 +129,14 @@
             x-transition
             class="absolute top-full left-0 w-full bg-white shadow-lg rounded-md mt-2 py-2"
           >
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-100"
+            <a
+              href="index.html"
+              class="block px-4 py-2 text-gray-700 hover:bg-blue-100"
               >Features</a
             >
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-100"
+            <a
+              href="integrations.html"
+              class="block px-4 py-2 text-gray-700 hover:bg-blue-100"
               >Integrations</a
             >
             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-100"
@@ -147,14 +156,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section
-      class="hero custom-gradient w-full min-h-screen flex items-center justify-center pt-16"
-    >
-      <div class="text-center px-6 flex flex-col items-center justify-center">
-        <h1 class="hero-text font-bold text-black">
-          The Free App for <br />Freight Factors
+    <section class="hero custom-gradient w-full min-h-screen pt-32 md:pt-36">
+      <div class="text-center px-8 flex flex-col items-center justify-center">
+        <h1 class="hero-text font-bold text-black lg:px-36 md:px-16">
+          The Free App for Freight Factors
         </h1>
-        <h4 class="text-black font-semibold text-2xl">
+        <h4 class="text-black font-semibold text-1xl sm:text-2xl">
           White Labeled for Your Company
         </h4>
         <a
@@ -163,7 +170,97 @@
           >Demo Your App</a
         >
       </div>
+
+      <div class="relative mt-28 overflow-hidden">
+        <div class="min-h-72 bg-blue-500 mb-28" id="animationContainer">
+          <img
+            src="./images/fuelcardbalance.png"
+            alt=""
+            class="rounded-lg drop-shadow-xl shadow-lg w-40 absolute top-0 left-20"
+            id="fuelCard"
+          />
+          <img
+            src="./images/ar.png"
+            alt=""
+            class="rounded-lg drop-shadow-xl shadow-lg absolute top-28 left-64 w-20"
+            id="ar"
+          />
+
+          <img
+            src="./images/summary.png"
+            alt=""
+            class="rounded-lg drop-shadow-xl shadow-lg absolute top-44 -left-14 w-64"
+            id="summary"
+          />
+
+          <img
+            src="./images/submitinvoice.png"
+            alt=""
+            class="rounded-lg drop-shadow-xl shadow-lg absolute top-0 right-24 w-24"
+            id="submitInvoice"
+          />
+          <img
+            src="./images/reserve.png"
+            alt=""
+            class="rounded-lg drop-shadow-xl shadow-lg absolute top-24 right-48 w-20"
+            id="reserve"
+          />
+
+          <img
+            src="./images/invoiceaging.png"
+            alt=""
+            class="rounded-lg drop-shadow-xl shadow-lg absolute top-40 -right-14 w-48"
+            id="invoice"
+          />
+        </div>
+        <div class="flex lg:container mx-auto">
+          <!-- 3 columns -->
+          <div class="w-full md:w-1/3 p-4 hidden lg:block lg:ml-12">
+            <h3 class="text-4xl font-bold">
+              Branded Modern Solutions Built for Retention
+            </h3>
+          </div>
+          <div class="w-full md:w-1/3 p-0">
+            <img
+              src="images/PhoneCase.png"
+              alt="Phone Case"
+              class=""
+              id="phoneCase"
+            />
+          </div>
+          <div class="w-full md:w-1/3 p-4 hidden lg:block lg:mr-12 text-lg">
+            <p class="mb-4">
+              FactorGenie’s white-label platform provides a fully branded mobile
+              app to enhance client retention and streamline operations.
+            </p>
+            <p>
+              Stand out from competitors and give your clients the digital tools
+              they expect, without the high cost of custom development.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <div
+      class="conatiner mx-auto p-4 flex flex-col gap-4 text-center lg:hidden"
+    >
+      <div class="w-full">
+        <h3 class="text-3xl font-bold">
+          Branded Modern Solutions Built for Retention
+        </h3>
+      </div>
+      <div class="w-full">
+        <p class="mb-4">
+          FactorGenie’s white-label platform provides a fully branded mobile app
+          to enhance client retention and streamline operations.
+        </p>
+        <p>
+          Stand out from competitors and give your clients the digital tools
+          they expect, without the high cost of custom development.
+        </p>
+      </div>
+    </div>
 
     <!-- Scrolling Logos Section -->
     <div class="container mx-auto py-8 text-center">
@@ -268,7 +365,7 @@
       <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold">
         <span class="text-blue-500">Self-Serve </span>Funding Requests
       </h3>
-      <p class="my-4 text-lg">
+      <p class="my-4 text-lg px-4">
         Funding requests are effortless with in-app document scanning, batch
         invoicing, and a seamless submission process—all in just a few taps
       </p>
@@ -292,7 +389,7 @@
               />
             </div>
           </div>
-          <div class="lg:mx-10 mt-2">
+          <div class="lg:mx-10 mt-2 px-4">
             <h3 class="text-xl font-bold">In-App Document Scanning</h3>
             <p>
               Scanner autocorrects perspective and lighting for increased
@@ -319,7 +416,7 @@
               />
             </div>
           </div>
-          <div class="lg:mx-10 mt-2">
+          <div class="lg:mx-10 mt-2 px-4">
             <h3 class="text-xl font-bold">Streamlined Funding Requests</h3>
             <p>
               Your clients request load and fuel funding in just a few taps from
@@ -346,7 +443,7 @@
               />
             </div>
           </div>
-          <div class="lg:mx-10 mt-2">
+          <div class="lg:mx-10 mt-2 px-4">
             <h3 class="text-xl font-bold">Multiple Load Batching</h3>
             <p>
               Enable your clients to easily make multiple funding requests in
@@ -394,7 +491,7 @@
     </section>
 
     <!--Smarter Factoring Section -->
-    <div class="container mx-auto py-8 text-center">
+    <div class="container mx-auto py-8 text-center px-4">
       <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold">
         More Tools for <span class="text-blue-500"> Smarter Factoring</span>
       </h3>
@@ -408,7 +505,7 @@
       >
         <!-- 4 columns -->
         <div
-          class="w-full md:w-1/4 bg-white p-4 sm:pt-8 sm:pb-14 px-6 shadow-lg"
+          class="w-full md:w-1/2 lg:w-1/4 bg-white p-4 sm:pt-8 sm:pb-14 px-6 shadow-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -528,8 +625,145 @@
       </div>
     </div>
 
-    <div class="container mx-auto py-8 text-center">
-      <h3 class="text-4xl font-bold">Frequently Asked Questions</h3>
+    <div class="container mx-auto py-8 px-4">
+      <h3 class="text-4xl font-bold text-center">Frequently Asked Questions</h3>
+      <div class="flex flex-col gap-4 mt-10 md:mx-12">
+        <!-- Tab 1 -->
+        <div>
+          <button
+            class="bg-blue-500 rounded-2xl w-full text-left py-3 px-4 flex justify-between items-center focus:outline-none tab-btn"
+          >
+            <span class="font-semibold"
+              >Does FactorGenie replace my current FMS factoring software?</span
+            >
+            <svg
+              class="w-5 h-5 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div class="tab-content hidden p-4 text-gray-700">
+            No, we integrate with and upgrade your current Factoring Management
+            System (FMS). You don’t have to migrate your data or retrain your
+            staff.
+          </div>
+        </div>
+
+        <!-- Tab 2 -->
+        <div>
+          <button
+            class="bg-blue-500 rounded-2xl w-full text-left py-3 px-4 flex justify-between items-center focus:outline-none tab-btn"
+          >
+            <span class="font-semibold">Do you offer a fuel card?</span>
+            <svg
+              class="w-5 h-5 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div class="tab-content hidden p-4 text-gray-700">
+            No, we integrate any of your existing fuel card programs into your
+            app, increasing your card sign-ups and gallons pumped.
+          </div>
+        </div>
+        <!-- Tab 3 -->
+        <div>
+          <button
+            class="bg-blue-500 rounded-2xl w-full text-left py-3 px-4 flex justify-between items-center focus:outline-none tab-btn"
+          >
+            <span class="font-semibold">How soon can I launch my app?</span>
+            <svg
+              class="w-5 h-5 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div class="tab-content hidden p-4 text-gray-700">
+            Most apps are ready to be launched within 5 days.
+          </div>
+        </div>
+        <!-- Tab 4 -->
+        <div>
+          <button
+            class="bg-blue-500 rounded-2xl w-full text-left py-3 px-4 flex justify-between items-center focus:outline-none tab-btn"
+          >
+            <span class="font-semibold"
+              >Do you help me market the app to my clients?</span
+            >
+            <svg
+              class="w-5 h-5 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div class="tab-content hidden p-4 text-gray-700">
+            Yes, we provide landing pages and marketing materials.
+          </div>
+        </div>
+        <!-- Tab 5 -->
+        <div>
+          <button
+            class="bg-blue-500 rounded-2xl w-full text-left py-3 px-4 flex justify-between items-center focus:outline-none tab-btn"
+          >
+            <span class="font-semibold"
+              >Do you provide tutorials to help truckers use the app?</span
+            >
+            <svg
+              class="w-5 h-5 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div class="tab-content hidden p-4 text-gray-700">
+            Sure, but it's so simple, you won't need them!
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Dual Background Section -->
@@ -572,8 +806,152 @@
         </div>
       </div>
     </section>
+    <footer class="px-4 lg:px-8 flex flex-col md:flex-row gap-5 mt-12 pb-10">
+      <div class="w-full md:w-1/1 p-4">
+        <!-- Logo -->
+        <svg
+          class="logo w-52 mb-6"
+          preserveAspectRatio="xMidYMid meet"
+          data-bbox="0 0 456.82 52.14"
+          viewBox="0 0 456.82 52.14"
+          xmlns="http://www.w3.org/2000/svg"
+          data-type="color"
+          role="presentation"
+          aria-hidden="true"
+          aria-label=""
+        >
+          <g>
+            <path
+              d="M8.84 1.03h30.33l-.83 4.64H13.51l-3.23 18.3h21.39l-.83 4.64H9.46L5.51 51.1H0z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M54.04.69h5.33L69.62 51.1h-5.54l-7.43-39.06c-.16-.87-.3-1.73-.43-2.56-.13-.84-.22-1.67-.29-2.49h-.34c-.34.83-.72 1.66-1.12 2.49s-.83 1.69-1.29 2.56L31.83 51.1h-5.71zM38.7 33.01h24.55l.93 4.57H36.12z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M77.48 24.66c1.4-7.84 4.43-13.91 9.1-18.21Q93.57 0 102.42 0c8.85 0 9.8 1.57 12.55 4.71q4.125 4.71 3.3 12l-.03.34h-5.5l.03-.34c.37-3.58-.37-6.46-2.22-8.65s-4.84-3.29-8.99-3.29c-4.36 0-8.24 1.69-11.66 5.07s-5.7 8.32-6.84 14.81l-.48 2.82c-1.12 6.33-.58 11.22 1.63 14.68s5.51 5.19 9.89 5.19 7.73-1.19 10.25-3.58c2.52-2.38 4.22-5.17 5.09-8.36l.1-.34h5.5l-.1.34c-1.28 4.66-3.75 8.6-7.41 11.85-3.66 3.24-8.42 4.87-14.29 4.87s-10.42-2.14-13.58-6.41c-3.16-4.28-4.05-10.36-2.65-18.24l.48-2.82Z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M123.99 1.03h38.51l-.83 4.64h-16.5l-8.01 45.43h-5.5l8.01-45.43h-16.51z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M161.73 24.66c1.4-7.84 4.43-13.91 9.1-18.21S180.9 0 187.04 0s10.76 2.15 13.93 6.45c3.16 4.3 4.05 10.37 2.65 18.21l-.48 2.82c-1.38 7.84-4.4 13.91-9.08 18.21q-7.02 6.45-16.2 6.45c-9.18 0-10.79-2.15-13.94-6.45s-4.04-10.37-2.66-18.21l.48-2.82Zm6.74 17.48c2.2 3.47 5.62 5.21 10.25 5.21s8.63-1.74 12.05-5.21c3.43-3.47 5.69-8.36 6.79-14.67l.48-2.82c1.12-6.31.58-11.19-1.63-14.67-2.21-3.47-5.61-5.21-10.2-5.21s-8.66 1.74-12.09 5.21-5.7 8.36-6.83 14.67l-.48 2.82c-1.1 6.31-.55 11.19 1.65 14.67Z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M216.9 1.03h15.89c5.3 0 9.12 1.32 11.47 3.96s3.13 6.17 2.35 10.59-2.81 7.98-6.1 10.66-7.58 4.02-12.88 4.02h-10.39l-3.68 20.84h-5.5zm11.52 24.66c4.06 0 7.06-.96 9.01-2.89s3.17-4.33 3.68-7.22c.5-2.89.12-5.27-1.15-7.15s-3.94-2.82-7.99-2.82h-10.39l-3.54 20.08zm.49 2.3 5.36-.65 8.6 23.76h-5.78z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M251.41 24.52c1.45-8.21 4.66-14.34 9.65-18.4S272.1.03 279.23.03c6.53 0 11.44 1.51 14.72 4.54s4.4 6.96 3.37 11.8l-.14.55h-13.27l.07-.41c.39-2.06.02-3.7-1.1-4.92s-3.12-1.82-5.98-1.82-5.23 1-7.29 2.99c-2.06 2-3.49 5.31-4.3 9.94l-1.2 6.74c-.85 4.82-.46 8.19 1.17 10.13q2.445 2.91 7.29 2.91c1.53 0 2.88-.17 4.02-.5 1.15-.33 2.33-.88 3.54-1.63l1.27-7.08h-7.87l1.65-9.42h20.84l-3.68 20.8c-2.2 1.86-5.1 3.57-8.7 5.12-3.6 1.56-7.86 2.34-12.79 2.34-7.64 0-13.23-2.03-16.78-6.09s-4.62-10.19-3.2-18.4l.55-3.1Z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M306.79 1.03h35.25l-1.72 9.73h-22.21l-1.75 9.83h19.09l-1.68 9.52h-19.09l-1.96 11.31h22.59l-1.72 9.66h-35.63l8.84-50.07Z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M348.83 1.03h14.03l9.94 28.4a20.4 20.4 0 0 1 .89 3.92h.27c.09-.83.18-1.52.28-2.1.09-.57.21-1.27.34-2.1l4.99-28.13h10.9l-8.84 50.07h-14.44l-9.77-27.96c-.25-.69-.42-1.35-.5-1.98s-.17-1.35-.26-2.15h-.27c-.09.83-.19 1.61-.29 2.34q-.15 1.095-.39 2.34l-4.82 27.41h-10.9l8.84-50.07Z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M399.44 1.03h13.17l-8.84 50.07H390.6z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+            <path
+              d="M421.57 1.03h35.25l-1.72 9.73h-22.21l-1.75 9.83h19.09l-1.68 9.52h-19.09l-1.96 11.31h22.59l-1.72 9.66h-35.63l8.84-50.07Z"
+              fill="#008ff5"
+              data-color="1"
+            ></path>
+          </g>
+        </svg>
+        <p>© 2025 FactorGenie</p>
+      </div>
+      <div class="w-full md:w-1/4 flex flex-col px-4">
+        <!-- links -->
+        <a href="index.html">Home</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="#">Contact </a>
+        <a href="#">Schedule a Demo </a>
+      </div>
+      <div class="w-full md:w-1/4 flex flex-col px-4">
+        <a href="#">Terms & Conditions </a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
 
     <script>
+      // ✅ GSAP & ScrollTrigger Register
+      gsap.registerPlugin(ScrollTrigger);
+
+      // ✅ Initialize Lenis Scroll
+      const lenis = new Lenis();
+      lenis.on("scroll", ScrollTrigger.update); // GSAP Sync
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      // ✅ Scroll Animation Timeline
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#animationContainer", // Parent Container
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+          markers: false, // Enable this to debug positions
+        },
+      });
+
+      // ✅ Left to Bottom Center
+      tl.to("#submitInvoice", {
+        x: -410, // Move to center in X
+        y: 300, // Move downwards
+        duration: 2,
+      });
+
+      // ✅ Right to Bottom Center
+      tl.to(
+        "#fuelCard",
+        {
+          x: 410,
+          y: 300,
+          duration: 2,
+        },
+        "<"
+      ); // "<" means both animations happen together
+
+      tl.to(
+        "#summary",
+        {
+          x: 550,
+          y: 0,
+          duration: 2,
+        },
+        "<"
+      );
+
+      ScrollTrigger.scrollerProxy(document.body, {
+        scrollTop(value) {
+          return arguments.length ? lenis.scrollTo(value) : lenis.scroll;
+        },
+      });
+
       // Simple image change effect
       const images = [
         "./images/94a96b_47c4c904829c4852956d8e92bec56575~mv2.png",
@@ -594,6 +972,28 @@
         document.getElementById("mobileImage").src = images[index];
         index = (index + 1) % images.length;
       }, 3500);
+
+      document.querySelectorAll(".tab-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector("svg");
+
+          if (content.classList.contains("hidden")) {
+            document
+              .querySelectorAll(".tab-content")
+              .forEach((el) => el.classList.add("hidden"));
+            document
+              .querySelectorAll(".tab-btn svg")
+              .forEach((icon) => icon.classList.remove("rotate-180"));
+
+            content.classList.remove("hidden");
+            icon.classList.add("rotate-180");
+          } else {
+            content.classList.add("hidden");
+            icon.classList.remove("rotate-180");
+          }
+        });
+      });
     </script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </body>
