@@ -102,3 +102,91 @@ h1.hero-text {
 .border-round div {
   border-radius: 25px;
 }
+
+/* Default (Mobile) */
+@media (max-width: 767px) {
+  .animate {
+    transform: translateY(50px);
+  }
+}
+
+/* Medium Screens (md: 768px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  #factoringApp {
+    width: 25%;
+  }
+  #factoringApp p {
+    font-size: 12px;
+    margin-top: 22px;
+  }
+
+  #summary {
+    width: 22%;
+  }
+
+  #submitInvoice {
+    width: 8%;
+  }
+  #fuelCard {
+    width: 13%;
+  }
+  #ar {
+    left: 20%;
+  }
+  #ar,
+  #reserve {
+    width: 8%;
+  }
+
+  #invoice {
+    width: 12%;
+  }
+}
+
+/* Large Screens (lg: 1024px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #factoringApp p {
+    margin-top: 25px;
+  }
+  #invoice {
+    width: 13%;
+  }
+}
+
+/* Extra Large Screens (xl: 1280px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  #factoringApp {
+    width: 26%;
+  }
+}
+
+/* Ultra-Wide Screens (2xl: 1536px) */
+@media (min-width: 1440px) {
+  #factoringApp {
+    width: 25%;
+  }
+  #factoringApp p {
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #summary {
+    width: 22%;
+  }
+  #submitInvoice {
+    width: 8%;
+  }
+  #fuelCard {
+    width: 13%;
+  }
+  #ar {
+    left: 20%;
+  }
+  #ar,
+  #reserve {
+    width: 7%;
+  }
+  #invoice {
+    width: 13%;
+  }
+}
