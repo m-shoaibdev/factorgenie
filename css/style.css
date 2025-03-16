@@ -103,17 +103,24 @@ h1.hero-text {
   border-radius: 25px;
 }
 
+#factoringApp {
+  border-radius: 40px;
+}
+
 /* Default (Mobile) */
 @media (max-width: 767px) {
   .animate {
     transform: translateY(50px);
   }
+  .mob-height {
+    height: 400px;
+  }
 }
 
 /* Medium Screens (md: 768px) */
 @media (min-width: 768px) and (max-width: 1279px) {
-  #factoringApp {
-    width: 25%;
+  .mob-height {
+    height: 400px;
   }
   #factoringApp p {
     font-size: 12px;
@@ -132,6 +139,7 @@ h1.hero-text {
   }
   #ar {
     left: 20%;
+    top: 10%;
   }
   #ar,
   #reserve {
@@ -145,6 +153,13 @@ h1.hero-text {
 
 /* Large Screens (lg: 1024px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
+  .mob-height {
+    height: 540px;
+  }
+  #factoringApp {
+    background-color: red;
+    top: -13rem;
+  }
   #factoringApp p {
     margin-top: 25px;
   }
@@ -156,14 +171,14 @@ h1.hero-text {
 /* Extra Large Screens (xl: 1280px) */
 @media (min-width: 1280px) and (max-width: 1439px) {
   #factoringApp {
-    width: 26%;
+    top: -10rem;
   }
 }
 
 /* Ultra-Wide Screens (2xl: 1536px) */
 @media (min-width: 1440px) {
   #factoringApp {
-    width: 25%;
+    top: -9rem;
   }
   #factoringApp p {
     margin-top: 50px;

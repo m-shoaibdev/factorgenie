@@ -663,5 +663,28 @@
       </div>
     </footer>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+     <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight; // Header ki height
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scroll down - hide karo
+                header.style.transform = `translateY(-${headerHeight}px)`;
+                header.style.opacity = '0';
+                header.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+            } else {
+                // Scroll up - show karo
+                header.style.transform = 'translateY(0)';
+                header.style.opacity = '1';
+                header.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+            }
+            
+            lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
   </body>
 </html>

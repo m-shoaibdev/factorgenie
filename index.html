@@ -13,7 +13,7 @@
   <body>
     <!-- Header -->
     <header
-      class="flex justify-between items-center shadow-md rounded-full p-3 mx-4 fixed top-5 left-0 right-0 z-20"
+      class="flex justify-between items-center shadow-md rounded-full p-3 mx-4 fixed top-5 left-0 right-0 z-20 bg-white/90 backdrop-blur-sm"
     >
       <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
@@ -156,101 +156,119 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero custom-gradient w-full min-h-screen pt-32 md:pt-36">
-      <div class="text-center px-8 flex flex-col items-center justify-center">
-        <h1
-          class="hero-text font-bold text-black md:px-16 xl:px-40 lg:px-16 2xl:px-44"
+    <section
+      class="hero custom-gradient w-full min-h-screen pt-24 md:pt-24 overflow-hidden"
+    >
+      <div class="container mx-auto flex flex-col">
+        <!-- Heading Section -->
+        <div
+          class="text-center px-8 flex flex-col items-center justify-center section-heading mt-20 mb-16"
         >
-          The Free App for Freight Factors
-        </h1>
-        <h4 class="text-black font-semibold text-1xl sm:text-2xl">
-          White Labeled for Your Company
-        </h4>
-        <a
-          href="#"
-          class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600"
-          >Demo Your App</a
-        >
-      </div>
-
-      <div class="relative mt-28 overflow-hidden">
-        <div class="min-h-[100vh] -mb-20" id="animationContainer">
-          <div
-            class="bg-white md:w-[320px] h-full absolute top-0 left-1/2 -translate-x-1/2 rounded-3xl hidden md:block"
-            id="factoringApp"
+          <h1
+            class="hero-text font-bold text-black md:px-16 xl:px-40 lg:px-16 2xl:px-44 mb-4"
           >
-            <p class="text-center mt-10">Your Factoring App</p>
-          </div>
-
-          <img
-            src="./images/fuelcardbalance.png"
-            alt=""
-            class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] w-40 absolute top-0 left-20 hidden md:block"
-            id="fuelCard"
-          />
-          <img
-            src="./images/ar.png"
-            alt=""
-            class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-28 left-64 w-20 hidden md:block"
-            id="ar"
-          />
-
-          <img
-            src="./images/summary.png"
-            alt=""
-            class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-44 -left-14 w-[270px] -mt-1 hidden md:block"
-            id="summary"
-          />
-
-          <img
-            src="./images/submitinvoice.png"
-            alt=""
-            class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-0 right-24 w-24 hidden md:block"
-            id="submitInvoice"
-          />
-          <img
-            src="./images/reserve.png"
-            alt=""
-            class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-24 right-48 w-20 hidden md:block"
-            id="reserve"
-          />
-
-          <img
-            src="./images/invoiceaging.png"
-            alt=""
-            class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-40 -right-14 w-44 hidden md:block"
-            id="invoice"
-          />
+            The Free App for Freight Factors
+          </h1>
+          <h4 class="text-black font-semibold text-1xl sm:text-2xl mb-6">
+            White Labeled for Your Company
+          </h4>
+          <a
+            href="#"
+            class="mt-4 bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition"
+            >Demo Your App</a
+          >
         </div>
-        <div class="flex lg:container mx-auto">
-          <!-- 3 columns -->
-          <div class="w-full md:w-1/3 p-4 hidden lg:block lg:ml-12">
-            <h3 class="text-4xl font-bold">
-              Branded Modern Solutions Built for Retention
-            </h3>
-          </div>
-          <div class="w-full md:w-1/3 p-0">
+
+        <!-- Mobile Screen Section -->
+        <div class="relative md:top-10">
+          <div class="lg:h-[60vh] 2xl:h-[30vh]" id="animationContainer">
             <img
-              src="images/PhoneCase-size.png"
-              alt="Phone Case"
-              class="z-10 absolute md:w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-14 hidden md:block"
-              id="phoneCase"
+              src="./images/fuelcardbalance.png"
+              alt=""
+              class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] w-40 absolute -top-32 left-24 hidden md:block"
+              id="fuelCard"
             />
             <img
-              src="images/mobile-frame.png"
-              alt="Phone Case"
-              class="z-10 absolute md:w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block md:hidden"
+              src="./images/ar.png"
+              alt=""
+              class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-4 left-70 w-20 hidden md:block"
+              id="ar"
+            />
+
+            <img
+              src="./images/summary.png"
+              alt=""
+              class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-40 -left-28 w-[270px] -mt-1 hidden md:block"
+              id="summary"
+            />
+
+            <img
+              src="./images/submitinvoice.png"
+              alt=""
+              class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-0 right-24 w-24 hidden md:block"
+              id="submitInvoice"
+            />
+            <img
+              src="./images/reserve.png"
+              alt=""
+              class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-24 right-48 w-20 hidden md:block"
+              id="reserve"
+            />
+
+            <img
+              src="./images/invoiceaging.png"
+              alt=""
+              class="rounded-lg drop-shadow-xl shadow-[0px_-2px_15px_rgba(0,0,0,0.2)] absolute top-40 -right-14 w-44 hidden md:block"
+              id="invoice"
             />
           </div>
-          <div class="w-full md:w-1/3 p-4 hidden lg:block lg:mr-12 text-lg">
-            <p class="mb-4">
-              FactorGenie’s white-label platform provides a fully branded mobile
-              app to enhance client retention and streamline operations.
-            </p>
-            <p>
-              Stand out from competitors and give your clients the digital tools
-              they expect, without the high cost of custom development.
-            </p>
+
+          <div class="flex items-center lg:container mx-auto relative">
+            <!-- 3 columns -->
+            <div
+              class="w-full md:w-1/3 p-4 md:px-10 hidden lg:block absolute left-5"
+            >
+              <h3 class="text-4xl font-bold">
+                Branded Modern Solutions Built for Retention
+              </h3>
+            </div>
+            <div class="w-full relative xl:h-[660px] 2xl:h-[700px] mob-height">
+              <img
+                src="images/mobile-frame.png"
+                alt="Phone Case"
+                class="z-10 absolute md:w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block md:hidden"
+              />
+              <div class="mx-auto relative hidden md:block">
+                <!-- Mobile Frame -->
+                <img
+                  src="images/PhoneCase-size.png"
+                  alt="Phone Case"
+                  class="z-10 absolute object-cover left-1/2 -translate-x-1/2 w-[55%]"
+                  id="phoneCase"
+                />
+                <div
+                  class="bg-white rounded-3xl absolute h-[760px] lg:h-[800px] left-1/2 transform -translate-x-1/2 w-[27.5%] z-0"
+                  id="factoringApp"
+                >
+                  <p class="text-center mt-10 font-semibold">
+                    Your Factoring App
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full md:w-1/3 p-4 md:px-10 hidden lg:block text-lg absolute right-5"
+            >
+              <p class="mb-4">
+                FactorGenie’s white-label platform provides a fully branded
+                mobile app to enhance client retention and streamline
+                operations.
+              </p>
+              <p>
+                Stand out from competitors and give your clients the digital
+                tools they expect, without the high cost of custom development.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -277,7 +295,7 @@
     </div>
 
     <!-- Scrolling Logos Section -->
-    <div class="container mx-auto py-8 text-center">
+    <div class="container mx-auto py-8 text-center relative z-10">
       <h3 class="text-4xl font-bold">
         Brands <span class="text-blue-500">Powered By FactorGenie</span>
       </h3>
@@ -908,12 +926,15 @@
     </footer>
 
     <script>
-      // ✅ GSAP & ScrollTrigger Register
       gsap.registerPlugin(ScrollTrigger);
 
-      // ✅ Initialize Lenis Scroll
-      const lenis = new Lenis();
-      lenis.on("scroll", ScrollTrigger.update); // GSAP Sync
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+      });
+
+      lenis.on("scroll", ScrollTrigger.update);
 
       function raf(time) {
         lenis.raf(time);
@@ -921,177 +942,121 @@
       }
       requestAnimationFrame(raf);
 
-      // ✅ Responsive Animations
       let mm = gsap.matchMedia();
 
-      // ✅ Medium Screens (md: 768px)
+      function createAnimation(config) {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#animationContainer",
+            start: config.start || "top 40%",
+            end: config.end || "bottom 70%",
+            scrub: 1.5,
+            ease: "power2.inOut",
+            markers: false,
+          },
+        });
+
+        // Smoother movement for main app frame
+        tl.to("#factoringApp", {
+          y: 200,
+          duration: 2,
+          ease: "power2.out",
+          zIndex: 0,
+        });
+
+        // Animate first group with staggered timing
+        tl.to(
+          ["#submitInvoice", "#fuelCard", "#summary"],
+          {
+            x: (i) => config.firstGroupX[i],
+            y: (i) => config.firstGroupY[i],
+            duration: 2.5,
+            zIndex: 1,
+            stagger: {
+              each: 0.2,
+              ease: "power2.inOut",
+            },
+          },
+          "<0.3"
+        );
+
+        // Animate second group with staggered timing
+        tl.to(
+          ["#ar", "#reserve", "#invoice"],
+          {
+            x: (i) => config.secondGroupX[i],
+            y: (i) => config.secondGroupY[i],
+            duration: 3,
+            zIndex: 1,
+            stagger: {
+              each: 0.2,
+              ease: "power3.inOut",
+            },
+          },
+          "<0.5"
+        );
+
+        return tl;
+      }
+
+      // Medium screens
       mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#animationContainer",
-            start: "top 50%",
-            end: "bottom 80%",
-            scrub: true,
-            markers: false, // Enable for debugging
-          },
-        });
-
-        tl.to("#factoringApp", { y: 70, duration: 1.5 });
-
-        tl.to("#submitInvoice", { x: -203, y: 200, duration: 2 }, "<");
-        tl.to("#fuelCard", { x: 220, y: 200, duration: 2 }, "<");
-        tl.to("#summary", { x: 357, y: -60, duration: 2 }, "<");
-
-        tl.to("#ar", { x: 148, y: 170, duration: 3, ease: "power2.inOut" });
-        tl.to("#reserve", {
-          x: -300,
-          y: 400,
-          duration: 3.5,
-          ease: "power2.inOut",
-        });
-        tl.to("#invoice", {
-          x: -355,
-          y: 120,
-          duration: 4,
-          ease: "power2.inOut",
+        createAnimation({
+          start: "top 50%",
+          end: "bottom 80%",
+          appY: 70,
+          firstGroupX: [-203, 220, 357],
+          firstGroupY: [200, 200, -60],
+          secondGroupX: [148, -300, -355],
+          secondGroupY: [170, 400, 120],
         });
       });
 
-      // ✅ Large Screens (lg: 1024px)
+      // Large screens
       mm.add("(min-width: 1024px) and (max-width: 1279px)", () => {
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#animationContainer",
-            start: "top 45%",
-            end: "bottom 75%",
-            scrub: true,
-            markers: false,
-          },
-        });
-
-        tl.to("#factoringApp", { y: 160, duration: 1.8 });
-
-        tl.to("#submitInvoice", { x: -300, y: 340, duration: 2.2 }, "<");
-        tl.to("#fuelCard", { x: 320, y: 340, duration: 2.2 }, "<");
-        tl.to("#summary", { x: 455, y: 40, duration: 2.2 }, "<");
-
-        tl.to("#ar", { x: 195, y: 340, duration: 3.5, ease: "power2.inOut" });
-        tl.to("#reserve", {
-          x: -350,
-          y: 440,
-          duration: 4,
-          ease: "power2.inOut",
-        });
-        tl.to("#invoice", {
-          x: -453,
-          y: 300,
-          duration: 4.5,
-          ease: "power2.inOut",
+        createAnimation({
+          start: "top 45%",
+          end: "bottom 75%",
+          appY: 160,
+          firstGroupX: [-300, 320, 455],
+          firstGroupY: [340, 340, 40],
+          secondGroupX: [195, -350, -453],
+          secondGroupY: [340, 440, 300],
         });
       });
 
-      // ✅ Extra Large Screens (xl: 1280px)
-      mm.add("(min-width: 1280px)", () => {
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#animationContainer",
-            start: "top 40%",
-            end: "bottom 70%",
-            scrub: true,
-            markers: false,
-          },
-        });
-
-        tl.to("#factoringApp", { y: 155, duration: 2 });
-
-        tl.to("#submitInvoice", { x: -400, y: 405, duration: 2.5 }, "<");
-        tl.to("#fuelCard", { x: 420, y: 400, duration: 2.5 }, "<");
-        tl.to("#summary", { x: 555, y: 80, duration: 2.5 }, "<");
-
-        tl.to("#ar", { x: 245, y: 420, duration: 4, ease: "power3.inOut" });
-        tl.to("#reserve", {
-          x: -490,
-          y: 530,
-          duration: 4.5,
-          ease: "power3.inOut",
-        });
-        tl.to("#invoice", {
-          x: -550,
-          y: 365,
-          duration: 5,
-          ease: "power3.inOut",
+      // Extra large screens
+      mm.add("(min-width: 1280px) and (max-width: 1439px)", () => {
+        createAnimation({
+          appY: 155,
+          firstGroupX: [-400, 400, 610],
+          firstGroupY: [630, 755, 320],
+          secondGroupX: [500, -490, -550],
+          secondGroupY: [750, 780, 610],
         });
       });
 
+      // XXL screens
       mm.add("(min-width: 1440px)", () => {
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#animationContainer",
-            start: "top 40%",
-            end: "bottom 70%",
-            scrub: true,
-            markers: false,
-          },
-        });
-
-        tl.to("#factoringApp", { y: 165, duration: 2 });
-
-        tl.to("#submitInvoice", { x: -520, y: 463, duration: 2.5 }, "<");
-        tl.to("#fuelCard", { x: 538, y: 460, duration: 2.5 }, "<");
-        tl.to("#summary", { x: 673, y: 100, duration: 2.5 }, "<");
-
-        tl.to("#ar", { x: 305, y: 520, duration: 4, ease: "power3.inOut" });
-        tl.to("#reserve", {
-          x: -656,
-          y: 656,
-          duration: 4.5,
-          ease: "power3.inOut",
-        });
-        tl.to("#invoice", {
-          x: -675,
-          y: 475,
-          duration: 5,
-          ease: "power3.inOut",
+        createAnimation({
+          appY: 385,
+          firstGroupX: [-500, 505, 712],
+          firstGroupY: [575, 700, 250],
+          secondGroupX: [295, -635, -652],
+          secondGroupY: [700, 740, 570],
         });
       });
 
-      // // ✅ Ultra-Wide Screens (2xl: 1536px)
-      // mm.add("(min-width: 1536px)", () => {
-      //   let tl = gsap.timeline({
-      //     scrollTrigger: {
-      //       trigger: "#animationContainer",
-      //       start: "top 35%",
-      //       end: "bottom 65%",
-      //       scrub: true,
-      //       markers: false,
-      //     },
-      //   });
-
-      //   tl.to("#factoringApp", { y: 100, duration: 2.5 });
-
-      //   tl.to("#submitInvoice", { x: -600, y: 500, duration: 3 }, "<");
-      //   tl.to("#fuelCard", { x: 600, y: 500, duration: 3 }, "<");
-      //   tl.to("#summary", { x: 700, y: 250, duration: 3 }, "<");
-
-      //   tl.to("#ar", { x: 400, y: 550, duration: 5, ease: "power3.inOut" });
-      //   tl.to("#reserve", {
-      //     x: -700,
-      //     y: 600,
-      //     duration: 5.5,
-      //     ease: "power3.inOut",
-      //   });
-      //   tl.to("#invoice", {
-      //     x: -750,
-      //     y: 500,
-      //     duration: 6,
-      //     ease: "power3.inOut",
-      //   });
-      // });
-
+      // ✅ Smooth Scroll Sync
       ScrollTrigger.scrollerProxy(document.body, {
         scrollTop(value) {
           return arguments.length ? lenis.scrollTo(value) : lenis.scroll;
         },
+      });
+
+      // ✅ Refresh ScrollTrigger on Resize
+      window.addEventListener("resize", () => {
+        ScrollTrigger.refresh();
       });
 
       // Simple image change effect
@@ -1138,5 +1103,28 @@
       });
     </script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+      let lastScroll = 0;
+      const header = document.querySelector("header");
+      const headerHeight = header.offsetHeight; // Header ki height
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          // Scroll down - hide karo
+          header.style.transform = `translateY(-${headerHeight}px)`;
+          header.style.opacity = "0";
+          header.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+        } else {
+          // Scroll up - show karo
+          header.style.transform = "translateY(0)";
+          header.style.opacity = "1";
+          header.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+        }
+
+        lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+      });
+    </script>
   </body>
 </html>
